@@ -168,3 +168,7 @@ bool cart_load(char *cart) {
 
     return true;
 }
+
+u8 cart_read(u16 addr) {
+    
+}

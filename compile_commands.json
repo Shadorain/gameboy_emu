@@ -1,0 +1,42 @@
+[
+{
+  "directory": "/home/shadow/dev/shadoemu_gba/lib",
+  "command": "/bin/cc -DHAVE_CONFIG_H -I/home/shadow/dev/shadoemu_gba -I/home/shadow/dev/shadoemu_gba/include -I/usr/include/SDL2 -g -o CMakeFiles/emu.dir/bus.c.o -c /home/shadow/dev/shadoemu_gba/lib/bus.c",
+  "file": "/home/shadow/dev/shadoemu_gba/lib/bus.c"
+},
+{
+  "directory": "/home/shadow/dev/shadoemu_gba/lib",
+  "command": "/bin/cc -DHAVE_CONFIG_H -I/home/shadow/dev/shadoemu_gba -I/home/shadow/dev/shadoemu_gba/include -I/usr/include/SDL2 -g -o CMakeFiles/emu.dir/cart.c.o -c /home/shadow/dev/shadoemu_gba/lib/cart.c",
+  "file": "/home/shadow/dev/shadoemu_gba/lib/cart.c"
+},
+{
+  "directory": "/home/shadow/dev/shadoemu_gba/lib",
+  "command": "/bin/cc -DHAVE_CONFIG_H -I/home/shadow/dev/shadoemu_gba -I/home/shadow/dev/shadoemu_gba/include -I/usr/include/SDL2 -g -o CMakeFiles/emu.dir/cpu.c.o -c /home/shadow/dev/shadoemu_gba/lib/cpu.c",
+  "file": "/home/shadow/dev/shadoemu_gba/lib/cpu.c"
+},
+{
+  "directory": "/home/shadow/dev/shadoemu_gba/lib",
+  "command": "/bin/cc -DHAVE_CONFIG_H -I/home/shadow/dev/shadoemu_gba -I/home/shadow/dev/shadoemu_gba/include -I/usr/include/SDL2 -g -o CMakeFiles/emu.dir/emu.c.o -c /home/shadow/dev/shadoemu_gba/lib/emu.c",
+  "file": "/home/shadow/dev/shadoemu_gba/lib/emu.c"
+},
+{
+  "directory": "/home/shadow/dev/shadoemu_gba/lib",
+  "command": "/bin/cc -DHAVE_CONFIG_H -I/home/shadow/dev/shadoemu_gba -I/home/shadow/dev/shadoemu_gba/include -I/usr/include/SDL2 -g -o CMakeFiles/emu.dir/ppu.c.o -c /home/shadow/dev/shadoemu_gba/lib/ppu.c",
+  "file": "/home/shadow/dev/shadoemu_gba/lib/ppu.c"
+},
+{
+  "directory": "/home/shadow/dev/shadoemu_gba/lib",
+  "command": "/bin/cc -DHAVE_CONFIG_H -I/home/shadow/dev/shadoemu_gba -I/home/shadow/dev/shadoemu_gba/include -I/usr/include/SDL2 -g -o CMakeFiles/emu.dir/timer.c.o -c /home/shadow/dev/shadoemu_gba/lib/timer.c",
+  "file": "/home/shadow/dev/shadoemu_gba/lib/timer.c"
+},
+{
+  "directory": "/home/shadow/dev/shadoemu_gba/gbemu",
+  "command": "/bin/cc -DHAVE_CONFIG_H -I/home/shadow/dev/shadoemu_gba -I/home/shadow/dev/shadoemu_gba/include -I/usr/include/SDL2 -g -o CMakeFiles/gbemu.dir/main.c.o -c /home/shadow/dev/shadoemu_gba/gbemu/main.c",
+  "file": "/home/shadow/dev/shadoemu_gba/gbemu/main.c"
+},
+{
+  "directory": "/home/shadow/dev/shadoemu_gba/tests",
+  "command": "/bin/cc -DHAVE_CONFIG_H -I/home/shadow/dev/shadoemu_gba -I/home/shadow/dev/shadoemu_gba/tests/include -I/home/shadow/dev/shadoemu_gba/include -I/usr/include/SDL2 -g -o CMakeFiles/check_gbe.dir/check_gbe.c.o -c /home/shadow/dev/shadoemu_gba/tests/check_gbe.c",
+  "file": "/home/shadow/dev/shadoemu_gba/tests/check_gbe.c"
+}
+]
