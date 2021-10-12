@@ -1,1 +1,8 @@
 build/
+gbemu/
+.cache/
+lib/CMakeFiles/
+tests/
+CMakeFiles/
+compile_commands.json
+tags

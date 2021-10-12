@@ -1,1 +1,0 @@
-/bin/cc -g -rdynamic CMakeFiles/check_gbe.dir/check_gbe.c.o -o check_gbe  ../lib/libemu.a -lcheck -lSDL2 -lSDL2_ttf -Wl,-Bstatic -lSDL2main -Wl,-Bdynamic -lpthread -lSDL2 -lSDL2_ttf -Wl,-Bstatic -lSDL2main -Wl,-Bdynamic -lpthread 

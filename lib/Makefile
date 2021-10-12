@@ -258,6 +258,78 @@ cpu.c.s:
 	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/cpu.c.s
 .PHONY : cpu.c.s
 
+cpu_fetch.o: cpu_fetch.c.o
+.PHONY : cpu_fetch.o
+
+# target to build an object file
+cpu_fetch.c.o:
+	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/cpu_fetch.c.o
+.PHONY : cpu_fetch.c.o
+
+cpu_fetch.i: cpu_fetch.c.i
+.PHONY : cpu_fetch.i
+
+# target to preprocess a source file
+cpu_fetch.c.i:
+	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/cpu_fetch.c.i
+.PHONY : cpu_fetch.c.i
+
+cpu_fetch.s: cpu_fetch.c.s
+.PHONY : cpu_fetch.s
+
+# target to generate assembly for a file
+cpu_fetch.c.s:
+	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/cpu_fetch.c.s
+.PHONY : cpu_fetch.c.s
+
+cpu_proc.o: cpu_proc.c.o
+.PHONY : cpu_proc.o
+
+# target to build an object file
+cpu_proc.c.o:
+	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/cpu_proc.c.o
+.PHONY : cpu_proc.c.o
+
+cpu_proc.i: cpu_proc.c.i
+.PHONY : cpu_proc.i
+
+# target to preprocess a source file
+cpu_proc.c.i:
+	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/cpu_proc.c.i
+.PHONY : cpu_proc.c.i
+
+cpu_proc.s: cpu_proc.c.s
+.PHONY : cpu_proc.s
+
+# target to generate assembly for a file
+cpu_proc.c.s:
+	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/cpu_proc.c.s
+.PHONY : cpu_proc.c.s
+
+cpu_util.o: cpu_util.c.o
+.PHONY : cpu_util.o
+
+# target to build an object file
+cpu_util.c.o:
+	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/cpu_util.c.o
+.PHONY : cpu_util.c.o
+
+cpu_util.i: cpu_util.c.i
+.PHONY : cpu_util.i
+
+# target to preprocess a source file
+cpu_util.c.i:
+	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/cpu_util.c.i
+.PHONY : cpu_util.c.i
+
+cpu_util.s: cpu_util.c.s
+.PHONY : cpu_util.s
+
+# target to generate assembly for a file
+cpu_util.c.s:
+	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/cpu_util.c.s
+.PHONY : cpu_util.c.s
+
 emu.o: emu.c.o
 .PHONY : emu.o
 
@@ -282,6 +354,30 @@ emu.c.s:
 	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/emu.c.s
 .PHONY : emu.c.s
 
+instructions.o: instructions.c.o
+.PHONY : instructions.o
+
+# target to build an object file
+instructions.c.o:
+	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/instructions.c.o
+.PHONY : instructions.c.o
+
+instructions.i: instructions.c.i
+.PHONY : instructions.i
+
+# target to preprocess a source file
+instructions.c.i:
+	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/instructions.c.i
+.PHONY : instructions.c.i
+
+instructions.s: instructions.c.s
+.PHONY : instructions.s
+
+# target to generate assembly for a file
+instructions.c.s:
+	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/instructions.c.s
+.PHONY : instructions.c.s
+
 ppu.o: ppu.c.o
 .PHONY : ppu.o
 
@@ -305,6 +401,54 @@ ppu.s: ppu.c.s
 ppu.c.s:
 	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/ppu.c.s
 .PHONY : ppu.c.s
+
+ram.o: ram.c.o
+.PHONY : ram.o
+
+# target to build an object file
+ram.c.o:
+	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/ram.c.o
+.PHONY : ram.c.o
+
+ram.i: ram.c.i
+.PHONY : ram.i
+
+# target to preprocess a source file
+ram.c.i:
+	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/ram.c.i
+.PHONY : ram.c.i
+
+ram.s: ram.c.s
+.PHONY : ram.s
+
+# target to generate assembly for a file
+ram.c.s:
+	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/ram.c.s
+.PHONY : ram.c.s
+
+stack.o: stack.c.o
+.PHONY : stack.o
+
+# target to build an object file
+stack.c.o:
+	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/stack.c.o
+.PHONY : stack.c.o
+
+stack.i: stack.c.i
+.PHONY : stack.i
+
+# target to preprocess a source file
+stack.c.i:
+	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/stack.c.i
+.PHONY : stack.c.i
+
+stack.s: stack.c.s
+.PHONY : stack.s
+
+# target to generate assembly for a file
+stack.c.s:
+	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/stack.c.s
+.PHONY : stack.c.s
 
 timer.o: timer.c.o
 .PHONY : timer.o
@@ -353,12 +497,30 @@ help:
 	@echo "... cpu.o"
 	@echo "... cpu.i"
 	@echo "... cpu.s"
+	@echo "... cpu_fetch.o"
+	@echo "... cpu_fetch.i"
+	@echo "... cpu_fetch.s"
+	@echo "... cpu_proc.o"
+	@echo "... cpu_proc.i"
+	@echo "... cpu_proc.s"
+	@echo "... cpu_util.o"
+	@echo "... cpu_util.i"
+	@echo "... cpu_util.s"
 	@echo "... emu.o"
 	@echo "... emu.i"
 	@echo "... emu.s"
+	@echo "... instructions.o"
+	@echo "... instructions.i"
+	@echo "... instructions.s"
 	@echo "... ppu.o"
 	@echo "... ppu.i"
 	@echo "... ppu.s"
+	@echo "... ram.o"
+	@echo "... ram.i"
+	@echo "... ram.s"
+	@echo "... stack.o"
+	@echo "... stack.i"
+	@echo "... stack.s"
 	@echo "... timer.o"
 	@echo "... timer.i"
 	@echo "... timer.s"

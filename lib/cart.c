@@ -1,3 +1,4 @@
+#include "common.h"
 #include <cart.h>
 
 typedef struct {
@@ -169,6 +170,11 @@ bool cart_load(char *cart) {
     return true;
 }
 
-u8 cart_read(u16 addr) {
-    
+u8 cart_read(u16 addr) { /* ROM only type supported */
+    return ctx.rom_data[addr];
+}
+
+void cart_write(u16 addr, u8 val) { /* ROM only type supported */
+    printf("cart_write(%04X)\n", addr);
+    NO_IMPL
 }
