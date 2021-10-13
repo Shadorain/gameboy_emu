@@ -3,6 +3,7 @@
 #include <cart.h>
 #include <stdio.h>
 #include <cpu.h>
+#include <io.h>
 
 // 0x0000 - 0x3FFF : ROM Bank 0
 // 0x4000 - 0x7FFF : ROM Bank 1 - Switchable
@@ -32,13 +33,13 @@ u8 bus_read (u16 addr) {
         return 0;
     else if (addr < 0xFEA0) {/* OAM */
         printf("UNSUPPORTED: bus_read(%04X)\n", addr);
-        NO_IMPL /* TODO */
+        // NO_IMPL /* TODO */
+        return 0x0;
     } else if (addr < 0xFF00) /* reserved unusable */
         return 0;
-    else if (addr < 0xFF80) { /* IO Registers */
-        printf("UNSUPPORTED: bus_read(%04X)\n", addr);
-        NO_IMPL /* TODO */
-    } else if (addr == 0xFFFF) /* IO Registers */
+    else if (addr < 0xFF80) /* IO Registers */
+        return io_read(addr);
+    else if (addr == 0xFFFF) /* IO Registers */
         return cpu_get_ie_register();
     return hram_read(addr);
 }
@@ -48,7 +49,7 @@ void bus_write (u16 addr, u8 val) {
         cart_write(addr, val);
     } else if (addr < 0xA000) {
         printf("UNSUPPORTED: bus_write(%04X)\n", addr);
-        NO_IMPL /* TODO */
+        /* NO_IMPL /1* TODO *1/ */
     } else if (addr < 0xC000) /* Cart RAM */
         cart_write(addr, val);
     else if (addr < 0xE000) /* WRAM (Working) */
@@ -56,12 +57,11 @@ void bus_write (u16 addr, u8 val) {
     else if (addr < 0xFE00); /* ERAM (reserved echo) */
     else if (addr < 0xFEA0) { /* OAM */
         printf("UNSUPPORTED: bus_write(%04X)\n", addr);
-        NO_IMPL /* TODO */
+        /* NO_IMPL /1* TODO *1/ */
     } else if (addr < 0xFF00); /* reserved unusable */
-    else if (addr < 0xFF80) { /* IO Registers */
-        printf("UNSUPPORTED: bus_write(%04X)\n", addr);
-        // NO_IMPL /* TODO */
-    } else if (addr == 0xFFFF) /* IO Registers */
+    else if (addr < 0xFF80) /* IO Registers */
+        io_write(addr, val);
+    else if (addr == 0xFFFF) /* IO Registers */
         cpu_set_ie_register(val);
     else hram_write(addr, val);
 }
