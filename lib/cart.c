@@ -175,6 +175,6 @@ u8 cart_read(u16 addr) { /* ROM only type supported */
 }
 
 void cart_write(u16 addr, u8 val) { /* ROM only type supported */
-    printf("cart_write(%04X)\n", addr);
+    printf("cart_write(%04X, %04X)\n", addr, val);
     NO_IMPL
 }

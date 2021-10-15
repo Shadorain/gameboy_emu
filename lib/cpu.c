@@ -1,12 +1,9 @@
-#include "common.h"
-#include "dbg.h"
-#include "instructions.h"
+#include <dbg.h>
 #include <bus.h>
 #include <cpu.h>
 #include <emu.h>
 #include <interrupts.h>
 #include <timer.h>
-#include <stdio.h>
 
 cpu_context ctx = {0};
 
@@ -41,6 +38,7 @@ bool cpu_step() {
     if (!ctx.halted) {
         u16 pc = ctx.regs.pc;
         fetch_instruction();
+        emu_cycles(1);
         fetch_data();
 
         char flags[16];

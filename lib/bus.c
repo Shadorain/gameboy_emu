@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <cpu.h>
 #include <io.h>
+#include <ppu.h>
 
 // 0x0000 - 0x3FFF : ROM Bank 0
 // 0x4000 - 0x7FFF : ROM Bank 1 - Switchable
@@ -22,20 +23,17 @@
 u8 bus_read (u16 addr) {
     if (addr < 0x8000) /* ROM Data */
         return cart_read(addr);
-    else if (addr < 0xA000) { /* Char-Map Data */
-        printf("UNSUPPORTED: bus_read(%04X)\n", addr);
-        NO_IMPL /* TODO */
-    } else if (addr < 0xC000) /* Cart RAM */
+    else if (addr < 0xA000) /* Char-Map Data */
+        return ppu_vram_read(addr);
+    else if (addr < 0xC000) /* Cart RAM */
         return cart_read(addr);
     else if (addr < 0xE000) /* WRAM (Working) */
         return wram_read(addr);
     else if (addr < 0xFE00) /* ERAM (reserved echo) */
         return 0;
-    else if (addr < 0xFEA0) {/* OAM */
-        printf("UNSUPPORTED: bus_read(%04X)\n", addr);
-        // NO_IMPL /* TODO */
-        return 0x0;
-    } else if (addr < 0xFF00) /* reserved unusable */
+    else if (addr < 0xFEA0) /* OAM */
+        return ppu_oam_read(addr);
+    else if (addr < 0xFF00) /* reserved unusable */
         return 0;
     else if (addr < 0xFF80) /* IO Registers */
         return io_read(addr);
@@ -45,20 +43,18 @@ u8 bus_read (u16 addr) {
 }
 
 void bus_write (u16 addr, u8 val) {
-    if (addr < 0x8000) { /* ROM Data */
+    if (addr < 0x8000) /* ROM Data */
         cart_write(addr, val);
-    } else if (addr < 0xA000) {
-        printf("UNSUPPORTED: bus_write(%04X)\n", addr);
-        /* NO_IMPL /1* TODO *1/ */
-    } else if (addr < 0xC000) /* Cart RAM */
+    else if (addr < 0xA000)
+        ppu_vram_write(addr, val);
+    else if (addr < 0xC000) /* Cart RAM */
         cart_write(addr, val);
     else if (addr < 0xE000) /* WRAM (Working) */
         wram_write(addr, val);
     else if (addr < 0xFE00); /* ERAM (reserved echo) */
-    else if (addr < 0xFEA0) { /* OAM */
-        printf("UNSUPPORTED: bus_write(%04X)\n", addr);
-        /* NO_IMPL /1* TODO *1/ */
-    } else if (addr < 0xFF00); /* reserved unusable */
+    else if (addr < 0xFEA0) /* OAM */
+        ppu_oam_write(addr, val);
+    else if (addr < 0xFF00); /* reserved unusable */
     else if (addr < 0xFF80) /* IO Registers */
         io_write(addr, val);
     else if (addr == 0xFFFF) /* IO Registers */

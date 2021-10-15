@@ -67,6 +67,7 @@ int emu_run(int argc, char **argv) {
     while (!ctx.die) {
         usleep(1000);
         ui_handle_events();
+        ui_update();
     }
     return 0;
 }

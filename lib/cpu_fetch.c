@@ -31,8 +31,7 @@ void fetch_data() {
             emu_cycles(1);
             ctx.fetched_data = lo | (hi << 8);
             ctx.regs.pc += 2;
-            return;
-        }
+        } return;
         case AM_MR_R:
             ctx.fetched_data = cpu_read_reg(ctx.cur_inst->reg_2);
             ctx.mem_dest = cpu_read_reg(ctx.cur_inst->reg_1);
@@ -42,13 +41,12 @@ void fetch_data() {
             return;
         case AM_R_MR: {
             u16 addr = cpu_read_reg(ctx.cur_inst->reg_2);
-            if (ctx.cur_inst->reg_1 == RT_C)
+            if (ctx.cur_inst->reg_2 == RT_C)
                 addr |= 0xFF00;
 
             ctx.fetched_data = bus_read(addr);
             emu_cycles(1);
-            return;
-        }
+        } return;
         case AM_R_HLI:
             ctx.fetched_data = bus_read(cpu_read_reg(ctx.cur_inst->reg_2));
             emu_cycles(1);
@@ -129,7 +127,6 @@ void fetch_data() {
             ctx.regs.pc += 2;
             ctx.fetched_data = bus_read(addr);
             emu_cycles(1);
-            return;
         } return;
         default:
             printf("Unknown addressing mode! %d (%02X)\n", ctx.cur_inst->mode, ctx.cur_opcode);

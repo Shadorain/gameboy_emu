@@ -306,6 +306,30 @@ cpu_proc.c.s:
 	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/cpu_proc.c.s
 .PHONY : cpu_proc.c.s
 
+cpu_proc2.o: cpu_proc2.c.o
+.PHONY : cpu_proc2.o
+
+# target to build an object file
+cpu_proc2.c.o:
+	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/cpu_proc2.c.o
+.PHONY : cpu_proc2.c.o
+
+cpu_proc2.i: cpu_proc2.c.i
+.PHONY : cpu_proc2.i
+
+# target to preprocess a source file
+cpu_proc2.c.i:
+	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/cpu_proc2.c.i
+.PHONY : cpu_proc2.c.i
+
+cpu_proc2.s: cpu_proc2.c.s
+.PHONY : cpu_proc2.s
+
+# target to generate assembly for a file
+cpu_proc2.c.s:
+	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/cpu_proc2.c.s
+.PHONY : cpu_proc2.c.s
+
 cpu_util.o: cpu_util.c.o
 .PHONY : cpu_util.o
 
@@ -599,6 +623,9 @@ help:
 	@echo "... cpu_proc.o"
 	@echo "... cpu_proc.i"
 	@echo "... cpu_proc.s"
+	@echo "... cpu_proc2.o"
+	@echo "... cpu_proc2.i"
+	@echo "... cpu_proc2.s"
 	@echo "... cpu_util.o"
 	@echo "... cpu_util.i"
 	@echo "... cpu_util.s"

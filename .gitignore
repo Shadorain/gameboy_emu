@@ -1,8 +1,14 @@
 build/
-gbemu/
 .cache/
 lib/CMakeFiles/
-tests/
+
+gbemu/CMakeFiles/
+gbemu/gbemu
+
+tests/CMakeFiles/
+tests/check_gbe
+
 CMakeFiles/
 compile_commands.json
 tags
+lib/libemu.a
