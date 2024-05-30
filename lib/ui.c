@@ -41,6 +41,10 @@ void delay(u32 ms) {
     SDL_Delay(ms);
 }
 
+u32 get_ticks() {
+    return SDL_GetTicks();
+}
+
 static unsigned long tile_colors[4] = {0xFFFFFFFF, 0xFFAAAAAA, 0xFF555555, 0xFF000000};
 
 void display_tile (SDL_Surface *surface, u16 start_location, u16 tile_num, int x, int y) {

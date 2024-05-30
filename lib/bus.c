@@ -1,3 +1,4 @@
+#include "dma.h"
 #include <bus.h>
 #include <ram.h>
 #include <cart.h>
@@ -31,9 +32,10 @@ u8 bus_read (u16 addr) {
         return wram_read(addr);
     else if (addr < 0xFE00) /* ERAM (reserved echo) */
         return 0;
-    else if (addr < 0xFEA0) /* OAM */
+    else if (addr < 0xFEA0) { /* OAM */
+        if (dma_transferring()) return 0xFF;
         return ppu_oam_read(addr);
-    else if (addr < 0xFF00) /* reserved unusable */
+    } else if (addr < 0xFF00) /* reserved unusable */
         return 0;
     else if (addr < 0xFF80) /* IO Registers */
         return io_read(addr);
@@ -52,9 +54,10 @@ void bus_write (u16 addr, u8 val) {
     else if (addr < 0xE000) /* WRAM (Working) */
         wram_write(addr, val);
     else if (addr < 0xFE00); /* ERAM (reserved echo) */
-    else if (addr < 0xFEA0) /* OAM */
+    else if (addr < 0xFEA0) { /* OAM */
+        if (dma_transferring()) return;
         ppu_oam_write(addr, val);
-    else if (addr < 0xFF00); /* reserved unusable */
+    } else if (addr < 0xFF00); /* reserved unusable */
     else if (addr < 0xFF80) /* IO Registers */
         io_write(addr, val);
     else if (addr == 0xFFFF) /* IO Registers */

@@ -1,3 +1,4 @@
+#include "dma.h"
 #include <pthread.h>
 #include <unistd.h>
 #include <stdio.h>
@@ -6,6 +7,7 @@
 #include <cart.h>
 #include <cpu.h>
 #include <timer.h>
+#include <ppu.h>
 
 /* 
   Emu components:
@@ -27,6 +29,7 @@ emu_context *emu_get_context() {
 void *cpu_run (void *p) {
     timer_init();
     cpu_init();
+    ppu_init();
     ctx.running = true;
     ctx.paused = false;
     ctx.ticks = 0;
@@ -64,18 +67,25 @@ int emu_run(int argc, char **argv) {
         return -1;
     }
 
+    u32 prev_frame = 0;
+
     while (!ctx.die) {
         usleep(1000);
         ui_handle_events();
-        ui_update();
+        if (prev_frame != ppu_get_context()->current_frame)
+            ui_update();
+        prev_frame = ppu_get_context()->current_frame;
     }
     return 0;
 }
 
 void emu_cycles(int cpu_cycles) {
-    int n = cpu_cycles * 4;
-    for (int i = 0; i < n; i++) {
-        ctx.ticks++;
-        timer_tick();
+    for (int i = 0; i < cpu_cycles; i++) {
+        for (int n = 0; n < 4; n++) {
+            ctx.ticks++;
+            timer_tick();
+            ppu_tick();
+        }
+        dma_tick();
     }
 }

@@ -378,6 +378,30 @@ dbg.c.s:
 	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/dbg.c.s
 .PHONY : dbg.c.s
 
+dma.o: dma.c.o
+.PHONY : dma.o
+
+# target to build an object file
+dma.c.o:
+	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/dma.c.o
+.PHONY : dma.c.o
+
+dma.i: dma.c.i
+.PHONY : dma.i
+
+# target to preprocess a source file
+dma.c.i:
+	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/dma.c.i
+.PHONY : dma.c.i
+
+dma.s: dma.c.s
+.PHONY : dma.s
+
+# target to generate assembly for a file
+dma.c.s:
+	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/dma.c.s
+.PHONY : dma.c.s
+
 emu.o: emu.c.o
 .PHONY : emu.o
 
@@ -474,6 +498,30 @@ io.c.s:
 	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/io.c.s
 .PHONY : io.c.s
 
+lcd.o: lcd.c.o
+.PHONY : lcd.o
+
+# target to build an object file
+lcd.c.o:
+	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/lcd.c.o
+.PHONY : lcd.c.o
+
+lcd.i: lcd.c.i
+.PHONY : lcd.i
+
+# target to preprocess a source file
+lcd.c.i:
+	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/lcd.c.i
+.PHONY : lcd.c.i
+
+lcd.s: lcd.c.s
+.PHONY : lcd.s
+
+# target to generate assembly for a file
+lcd.c.s:
+	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/lcd.c.s
+.PHONY : lcd.c.s
+
 ppu.o: ppu.c.o
 .PHONY : ppu.o
 
@@ -497,6 +545,30 @@ ppu.s: ppu.c.s
 ppu.c.s:
 	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/ppu.c.s
 .PHONY : ppu.c.s
+
+ppu_sm.o: ppu_sm.c.o
+.PHONY : ppu_sm.o
+
+# target to build an object file
+ppu_sm.c.o:
+	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/ppu_sm.c.o
+.PHONY : ppu_sm.c.o
+
+ppu_sm.i: ppu_sm.c.i
+.PHONY : ppu_sm.i
+
+# target to preprocess a source file
+ppu_sm.c.i:
+	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/ppu_sm.c.i
+.PHONY : ppu_sm.c.i
+
+ppu_sm.s: ppu_sm.c.s
+.PHONY : ppu_sm.s
+
+# target to generate assembly for a file
+ppu_sm.c.s:
+	cd /home/shadow/dev/shadoemu_gba && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/ppu_sm.c.s
+.PHONY : ppu_sm.c.s
 
 ram.o: ram.c.o
 .PHONY : ram.o
@@ -632,6 +704,9 @@ help:
 	@echo "... dbg.o"
 	@echo "... dbg.i"
 	@echo "... dbg.s"
+	@echo "... dma.o"
+	@echo "... dma.i"
+	@echo "... dma.s"
 	@echo "... emu.o"
 	@echo "... emu.i"
 	@echo "... emu.s"
@@ -644,9 +719,15 @@ help:
 	@echo "... io.o"
 	@echo "... io.i"
 	@echo "... io.s"
+	@echo "... lcd.o"
+	@echo "... lcd.i"
+	@echo "... lcd.s"
 	@echo "... ppu.o"
 	@echo "... ppu.i"
 	@echo "... ppu.s"
+	@echo "... ppu_sm.o"
+	@echo "... ppu_sm.i"
+	@echo "... ppu_sm.s"
 	@echo "... ram.o"
 	@echo "... ram.i"
 	@echo "... ram.s"
